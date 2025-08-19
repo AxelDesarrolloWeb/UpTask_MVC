@@ -1,0 +1,1 @@
+function iniciarApp(){eliminarEspacios()}function eliminarEspacios(){const i=document.querySelector("#nombre");i.ltrim(),i.rtrim();document.querySelector("#email").trim()}document.addEventListener("DOMContentLoaded",function(){iniciarApp()});
