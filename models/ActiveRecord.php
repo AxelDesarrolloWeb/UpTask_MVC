@@ -77,6 +77,7 @@ class ActiveRecord {
         return $resultado;
     }
 
+
     // SQL para Consultas Avanzadas.
     public static function SQL($consulta) {
         $query = $consulta;
@@ -95,6 +96,9 @@ class ActiveRecord {
         $query .= " ) VALUES (' "; 
         $query .= join("', '", array_values($atributos));
         $query .= " ') ";
+
+        // echo json_encode(['sql' => $query]);
+        // return;
         
         // Resultado de la consulta
         $resultado = self::$db->query($query);
